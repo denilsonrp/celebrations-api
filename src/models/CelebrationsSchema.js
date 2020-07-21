@@ -5,6 +5,10 @@ const CelebrationsSchema = mongoose.Schema({
     required: true,
     type: Date
   },
+  date_end: {
+    required: true,
+    type: Date
+  },
   church: {
     required: true,
     type: String

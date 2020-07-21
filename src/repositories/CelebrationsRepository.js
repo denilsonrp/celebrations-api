@@ -7,9 +7,7 @@ const findOne = async ({ celebration_id }) => {
 }
 
 const findAvailable = async () => {
-  const celebrations = await CelebrationsSchema.find({ date: { $gte: new Date() } })
-
-  // TODO: ACRESCENTAR NA DATA ATUAL 2 HORAS PARA VALIDAÇÃO
+  const celebrations = await CelebrationsSchema.find({ date_end: { $gte: new Date() } })
   
   return celebrations
 }
